@@ -55,11 +55,11 @@ class Table:
         self.data = sorted(self.data, key=itemgetter(*sort_by_indices), reverse=desc)
 
     def pretty_print(self, start, end):
-        print "\n" + '-' * 136 + '\n' + "{0:^10}|{1:^10}|{2:^80}|{3:^10}|{4:^10}|{5:^10}|".format(
-            'Index', *self.columns) + '\n' + '-' * 136
+        print "\n" + '-' * 137 + '\n' + "|{0:^10}|{1:^10}|{2:^80}|{3:^10}|{4:^10}|{5:^10}|".format(
+            'Index', *self.columns) + '\n' + '-' * 137
         for idx in range(start, min(end, len(self))):
-            print "{0:^10}|{1:^10}|{2:^80}|{3:^10.4f}|{4:^10}|{5:^10.4f}|".format(idx+1, *self.data[idx])
-        print '-' * 136
+            print "|{0:^10}|{1:^10}|{2:^80}|{3:^10.4f}|{4:^10}|{5:^10.4f}|".format(idx+1, *self.data[idx])
+        print '-' * 137
 
     def __len__(self):
         # return number of rows in table
@@ -76,7 +76,7 @@ class Table:
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:
-        print "Usage:  ./analyze_movies.py (Gender|Age) <number>"
+        print "Usage:  python ./analyze_movies.py (Gender|Age) <number>"
         sys.exit(1)
     else:
         # Reading command line arguments

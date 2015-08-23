@@ -1,4 +1,4 @@
-# MovieLensAnalysis
+# MovieLensAnalyze
 Dataset: http://grouplens.org/datasets/movielens/
 
 #Problem Statement
