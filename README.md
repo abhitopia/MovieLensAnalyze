@@ -12,11 +12,11 @@ The problem statement above is very vague in terms of defining what **top** movi
 average rating of the movie. However, the problem with this is that our belief with movies that are rated by very few number of
 users can skew the ordering. Consider for example a movie X that has a single rating of "5". Clearly, the average rating of this
  movie is going to be "5" as well. However, since only one user rated this movie, our belief in this should be very low. 
- To account for this, number of users should be reflected in the score. Naive way would be to simple multiply average rating 
+ To account for this, number of users should be reflected in the score. A naiive way would be to simple multiply average rating 
  with the number of users ( to got total rating). Again, this has the problem that movies that are rated by a lot of people
- will get higher rating than rating watched by fewer number of people even if the average rating of former is less than the latter.
- To tackle this, I multiply with the logarithm of number of users instead. The idea is that out belief should linearly go up with the number 
- of users initial, however, after a limit it should plateau out.
+ will get higher total rating than movies that are rated by fewer number of people even if the average rating of former is less than the latter.
+ To tackle this, I multiply with the logarithm of number of users instead. The idea is that out belief in the avergae rating should linearly go up with the number 
+ of users initially, however, after a limit it should plateau out. This is achieved using logarithm function.
  
 
 #Note
