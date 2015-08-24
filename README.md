@@ -21,7 +21,7 @@ users can skew the ordering. Consider for example a movie X that has a single ra
 
 #Note
 
-*   Although **sqllite3** is part of standard library, however, I think using it will defeat the purpose so I have used my own class. It will be pretty simple to construct though
+*   Although **sqllite3** is part of standard library, however, I think using it will defeat the purpose so I have used my own class. It is pretty simple to write the SQL query to join the three tables though as following.
 
 ```sql
     CREATE TABLE movielens 
